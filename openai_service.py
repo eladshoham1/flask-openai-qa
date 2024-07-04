@@ -33,6 +33,6 @@ class OpenAIService:
                     {"role": "user", "content": question}
                 ]
             )
-            return True, response['choices'][0]['message']['content'].strip()
+            return True, response.choices[0].message['content'].strip()
         except Exception as e:
             return False, f'Something went wrong with your question: {str(e)}'
