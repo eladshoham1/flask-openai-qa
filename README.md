@@ -23,8 +23,8 @@ This project is a simple Flask server that exposes an endpoint to ask a question
 2. Create a virtual environment and activate it:
 
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate
+   py -m venv venv
+   ./venv/bin/activate
    ```
 
 3. Install the dependencies:
@@ -33,16 +33,17 @@ This project is a simple Flask server that exposes an endpoint to ask a question
    pip install -r requirements.txt
    ```
 
-4. Create a `.env` file and add your OpenAI API key:
+4. Create a `variables.env` file and add your OpenAI API key:
 
    ```env
+   DATABASE_URL=postgresql_url
    OPENAI_API_KEY=your_openai_api_key
    ```
 
 5. Build and run the Docker containers:
 
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
 
 6. Run the tests:
